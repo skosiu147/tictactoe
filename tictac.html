@@ -16,25 +16,26 @@
 
             <table>
                 <tr>
-                <td><button v-on:Click="updateBoard(0)">{{board[0]}}</button></td>
-                <td><button v-on:Click="updateBoard(1)">{{board[1]}}</button></td>
-                <td><button v-on:Click="updateBoard(2)">{{board[2]}}</button></td>
+                <td><button v-on:Click="updateBoard(0)" :disabled="isClicked[0] || winnerTest">{{board[0]}}</button></td>
+                <td><button v-on:Click="updateBoard(1)" :disabled="isClicked[1] || winnerTest">{{board[1]}}</button></td>
+                <td><button v-on:Click="updateBoard(2)" :disabled="isClicked[2] || winnerTest">{{board[2]}}</button></td>
                 </tr>
 
                 <tr>
-                <td><button v-on:Click="updateBoard(3)">{{board[3]}}</button></td>
-                <td><button v-on:Click="updateBoard(4)">{{board[4]}}</button></td>
-                <td><button v-on:Click="updateBoard(5)">{{board[5]}}</button></td>
+                <td><button v-on:Click="updateBoard(3)" :disabled="isClicked[3] || winnerTest">{{board[3]}}</button></td>
+                <td><button v-on:Click="updateBoard(4)" :disabled="isClicked[4] || winnerTest">{{board[4]}}</button></td>
+                <td><button v-on:Click="updateBoard(5)" :disabled="isClicked[5] || winnerTest">{{board[5]}}</button></td>
                 </tr>
 
                 <tr>
-                <td><button v-on:Click="updateBoard(6)">{{board[6]}}</button></td>
-                <td><button v-on:Click="updateBoard(7)">{{board[7]}}</button></td>
-                <td><button v-on:Click="updateBoard(8)">{{board[8]}}</button></td>
+                <td><button v-on:Click="updateBoard(6)" :disabled="isClicked[6] || winnerTest">{{board[6]}}</button></td>
+                <td><button v-on:Click="updateBoard(7)" :disabled="isClicked[7] || winnerTest">{{board[7]}}</button></td>
+                <td><button v-on:Click="updateBoard(8)" :disabled="isClicked[8] || winnerTest">{{board[8]}}</button></td>
                 </tr>
             </table>
 
             <div class="winner">Winner: {{winner}}</div>
+            <button class="clear" v-show="winnerTest" v-on:Click="clearBoard();">CLEAR</button>
 
         </div> <!--app-->
 
