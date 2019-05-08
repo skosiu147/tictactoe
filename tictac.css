@@ -35,3 +35,10 @@ button{
     text-align: center;
     font-size: 30px;
 }
+
+.choosePlayer{
+    width: 150px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}

@@ -4,9 +4,10 @@ var app = new Vue({
         board: [],
         winner: '',
         winnerTest: false,
-        x: true,
+        x: false,
         o: false,
         isClicked: [],
+        isPlayerChoosen: false,
     },
 
     methods: {
@@ -80,13 +81,23 @@ var app = new Vue({
                 this.winnerTest = true;
             }
         },//end method findWinner
+        choosePlayer(i){
+            if(i == 1){
+                this.x = true;
+                this.isPlayerChoosen = true;
+            }else if(i == 2){
+                this.o = true;
+                this.isPlayerChoosen = true;
+            }
+        },//end method choosePlayer
         clearBoard(){
             this.board = [];
             this.winner = '';
             this.winnerTest = false;
-            this.x = true;
+            this.x = false;
             this.o = false;
             this.isClicked = [];
+            this.isPlayerChoosen = false;
         },//end method clearBoard
     },
 })

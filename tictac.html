@@ -9,8 +9,11 @@
     <body>
         <div id="app">
             <!--<div v-for="(b, i) in board">{{i}} {{b}}</div>-->
+            <div class="info" v-if="!isPlayerChoosen">Choose player: </div>
+            <button class="choosePlayer" v-if="!isPlayerChoosen" v-on:Click="choosePlayer(1)">x</button>
+            <button class="choosePlayer" v-if="!isPlayerChoosen" v-on:Click="choosePlayer(2)">o</button>
 
-            <div class="info">current player: </div>
+            <div class="info" v-if="x || o">current player: </div>
             <div class="info" v-if="x">x</div>
             <div class="info" v-if="o">o</div>
 
