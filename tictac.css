@@ -17,3 +17,15 @@ button{
     height: 100px;
     font-size: 50px;
 }
+
+.info{
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.winner{
+    width: 300px;
+    text-align: center;
+    font-size: 30px;
+}

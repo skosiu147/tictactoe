@@ -8,11 +8,11 @@
     </head>
     <body>
         <div id="app">
-            <div v-for="(b, i) in board">{{i}} {{b}}</div>
+            <!--<div v-for="(b, i) in board">{{i}} {{b}}</div>-->
 
-            <div>current player: </div>
-            <div v-if="x">x</div>
-            <div v-if="o">o</div>
+            <div class="info">current player: </div>
+            <div class="info" v-if="x">x</div>
+            <div class="info" v-if="o">o</div>
 
             <table>
                 <tr>
@@ -33,6 +33,8 @@
                 <td><button v-on:Click="updateBoard(8)">{{board[8]}}</button></td>
                 </tr>
             </table>
+
+            <div class="winner">Winner: {{winner}}</div>
 
         </div> <!--app-->
 
