@@ -1,0 +1,19 @@
+table{
+    background-color: lightgray;
+    width: 300px;
+    height: 300px;
+}
+
+tr{
+    width: 100px
+}
+
+td{
+    width: 100px;
+}
+
+button{
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+}
